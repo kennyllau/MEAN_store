@@ -1,0 +1,37 @@
+<div class="row">
+	<div class="three columns" id="leftproduct">
+		<input type="text" ng-model="filter_name" placeholder="filter">
+		<button class="button-primary">Filter</button>
+		<h6>Add a new product</h6>
+		<form>
+			<label>Name:</label>
+			<input type="text" ng-model="newProduct.productname"></input>
+			<label>Image (url):</label>
+			<input type="text" ng-model="newProduct.image"></input>
+			<label>Description:</label>
+			<input type="text" ng-model="newProduct.description"></input>
+			<label>Initial Quantity</label>
+			<select class="u-full-width" ng-model="newProduct.quantity">
+				<option>1</option>
+				<option>2</option>
+				<option>3</option>
+				<option>4</option>
+				<option>5</option>
+			</select>
+			<button class="button-primary u-pull-right" ng-click="addProduct(newProduct)">Create</button>
+		</form>
+	</div>
+	<div id="imagebox" class="nine columns" ng-repeat="product in products">
+		<div>
+			<img src="{{product.image}}">
+			<p>{{product.productname}}</p>
+			<p>( {{product.quantity}} left )</p>
+		</div>
+	</div>	
+</div>
+<div class="row">
+	<div class="two columns u-pull-right">
+		<a href="#">Show More...</a>
+	</div>
+	<br><br>
+</div>

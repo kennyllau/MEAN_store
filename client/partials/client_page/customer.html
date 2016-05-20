@@ -1,0 +1,40 @@
+<hr>
+<div class="row">
+	<h1>Add New Customer</h1>
+	<form>
+		<div>
+			<label>Customer Name: </label>
+			<input type="text" ng-model = "newCustomer.name" >
+		</div>
+		<button class="button-primary" ng-click = "addCustomer(newCustomer)">Add</button>
+	</form>
+</div>
+<hr>
+<div class="row">
+    <div class="twelve columns">
+          <table class="u-full-width">
+              <thead>
+                    <tr>
+                        <th>Customer Name</th>     
+                        <th>Product</th>     
+                        <th>Quantity</th>     
+                        <th>Date</th>     
+                    </tr>
+              </thead>
+              <tbody>
+                  <tr ng-repeat="order in orders track by $index">
+                      <td ng-bind="order.name"></td>
+                      <td ng-bind="order.item"></td>
+                      <td ng-bind="order.quantity"></td>
+                      <td ng-bind="order.created_at | date: 'medium'"></td>
+                      <td ng-click="removeOrder(order)"><button class="button-primary">Remove Order</button></td>   
+                  </tr>
+              </tbody>
+          </table>
+    </div>
+</div>
+
+
+    
+
+	  

@@ -1,0 +1,42 @@
+<div class="row">
+	<div class="eight columns">
+		<h1 class="u-pull-right">Luke's Shitty Supplies</h1>
+	</div>
+</div>
+<div class="row u-pull-left">
+	<div class="two columns">
+	<input type="text" ng-model="filter_name" placeholder="filter">
+	<button class="button-primary">Filter</button>
+	</div>
+</div>
+		<div class="nine columns u-pull-right">
+			<h4>Products Inventory</h4>
+			<div id="dashsize" ng-repeat="product in get5Products">
+				<img id="dashpic" src="{{product.image}}">
+			</div>
+			<br>
+			<a href="#/products">Show More...</a>
+		</div>
+<!-- {{get5Products}} -->
+<!-- {{products}} -->
+<!-- {{get3Orders}} -->
+<!-- {{get3Customers}} -->
+<div class="row">		
+		<div class="nine columns u-pull-right">
+			<h4>Recent Orders</h4>
+			<div ng-repeat="order in get3Orders">
+				<h6>{{order.name}} purchased {{order.quantity}} {{order.item}} ...</h6>	
+			</div>
+			<a href="#/orders">Show all orders...</a>
+		</div>
+</div>
+<div class="row">
+		<div class="nine columns u-pull-right">
+			<h4>New Customers</h4>
+			<div ng-repeat="customer in get3Customers">
+				<h6>{{customer.name}} joined the store...</h6>	
+			</div>
+			<a href="#/customers">Show all customers...</a>
+		</div>
+	
+</div>

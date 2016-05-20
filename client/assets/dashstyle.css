@@ -1,0 +1,8 @@
+#dashpic{
+	height: 100px;
+	width: 100px;
+	padding: 5px;
+}
+#dashsize{
+	display: inline-block;
+}
